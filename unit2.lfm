@@ -1,0 +1,36 @@
+object Form2: TForm2
+  Left = 536
+  Height = 247
+  Top = 132
+  Width = 320
+  Caption = 'About'
+  ClientHeight = 247
+  ClientWidth = 320
+  LCLVersion = '1.0.2.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 242
+    Top = 0
+    Width = 320
+    Color = clMenu
+    Lines.Strings = (
+      'Лаборатона робота №4 з предмету ТПСПП'
+      'На тему "Знаходження кореню нелінійного рівняння, '
+      'методом ділення відрізку навпіл"'
+      ''
+      'Виконала студентка 321б'
+      'Чухилевич  Наталія'
+    )
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 128
+    Height = 25
+    Top = 215
+    Width = 75
+    Caption = 'Ok'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+end

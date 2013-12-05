@@ -2,10 +2,10 @@ object Form1: TForm1
   Left = 377
   Height = 309
   Top = 190
-  Width = 461
+  Width = 462
   Caption = 'Lab5'
   ClientHeight = 289
-  ClientWidth = 461
+  ClientWidth = 462
   Menu = MainMenu1
   LCLVersion = '1.0.8.0'
   object Label1: TLabel
@@ -98,8 +98,8 @@ object Form1: TForm1
   end
   object Button2: TButton
     Left = 256
-    Height = 40
-    Top = 200
+    Height = 24
+    Top = 232
     Width = 184
     Caption = 'Видалити'
     OnClick = Button2Click
@@ -107,8 +107,8 @@ object Form1: TForm1
   end
   object Button3: TButton
     Left = 256
-    Height = 40
-    Top = 240
+    Height = 24
+    Top = 256
     Width = 184
     Caption = 'Вихід'
     OnClick = Button3Click
@@ -129,6 +129,15 @@ object Form1: TForm1
     Width = 52
     Caption = 'Розв''язок'
     ParentColor = False
+  end
+  object Button4: TButton
+    Left = 256
+    Height = 32
+    Top = 200
+    Width = 184
+    Caption = '2 способ'
+    OnClick = Button4Click
+    TabOrder = 8
   end
   object MainMenu1: TMainMenu
     left = 216

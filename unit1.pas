@@ -69,7 +69,6 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 var
-  code: integer;
   h: word;
 begin
   h := MessageDlg('Ви насправді хочете все видалити?',
@@ -86,7 +85,7 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
-  a, b, h, y, x, p, i: real; // a- нач коор b- кон координ. h - шаг
+  a, b, h, x, i: real; // a- нач коор b- кон координ. h - шаг
   t, code: byte;
   s1, s2: string;
 begin
@@ -146,7 +145,6 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 var
-  code: integer;
   h: word;
 begin
   h := MessageDlg(
@@ -158,7 +156,7 @@ end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 var
-  a, b, h, y, z, toch, nach, kon, last, c, i: real;
+  a, b, h, c: real;
   kor, func: string;
   code: byte;
   t: word;
@@ -181,21 +179,18 @@ begin
       else
       begin
         c := (a + b) / 2;
-
-        while abs(my_graph(c)) > h do
-        begin
+        repeat
           if (my_graph(a) * my_graph(c)) > 0 then
             a := c
           else
-            a := c;
+            a := b;
           c := (a + b) / 2;
-
           Chart1LineSeries1.AddXY(c, my_graph(c));
           Str(c: 3: 3, kor);
           Str(my_graph(c): 4: 4, func);
           memo1.Lines.Add('x=' + kor);
           memo1.Lines.Add('F(x)=' + func);
-        end;
+        until abs(my_graph(c)) < h;
       end;
     end;
   end;
